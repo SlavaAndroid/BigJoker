@@ -1,15 +1,15 @@
-package com.android.games.bigjoker.ui.main.load
+package com.im30.ROE.g.ui.main.load
 
 import android.app.Application
 import androidx.core.net.toUri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.android.games.bigjoker.utils.Params
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.facebook.applinks.AppLinkData
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import com.im30.ROE.g.utils.Params
 import com.onesignal.OneSignal
 import kotlinx.coroutines.*
 import java.util.*
@@ -33,7 +33,7 @@ class LoadViewModel(private val app: Application) : AndroidViewModel(app) {
                     sendOneSignal(defFB)
                 } else {
                     val def = defAF.await()
-                    resultLink.postValue(createResultLink(defFB, defGadid))
+                    resultLink.postValue(createResultLink(def, defGadid))
                     sendOneSignal(def)
                 }
             }
@@ -127,5 +127,4 @@ class LoadViewModel(private val app: Application) : AndroidViewModel(app) {
             OneSignal.sendTag("key2", "organic")
         }
     }
-
 }

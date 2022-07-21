@@ -1,8 +1,8 @@
-package com.android.games.bigjoker.data.prefs
+package com.im30.ROE.g.data.prefs
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.android.games.bigjoker.App
+import com.im30.ROE.g.App
 
 class Prefs {
 

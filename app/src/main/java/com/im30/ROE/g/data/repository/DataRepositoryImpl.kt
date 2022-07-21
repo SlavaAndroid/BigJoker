@@ -1,6 +1,6 @@
-package com.android.games.bigjoker.data.repository
+package com.im30.ROE.g.data.repository
 
-import com.android.games.bigjoker.data.prefs.Prefs
+import com.im30.ROE.g.data.prefs.Prefs
 
 class DataRepositoryImpl : DataRepository {
 

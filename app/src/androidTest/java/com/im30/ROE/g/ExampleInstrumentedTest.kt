@@ -1,4 +1,4 @@
-package com.android.games.bigjoker
+package com.im30.ROE.g
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

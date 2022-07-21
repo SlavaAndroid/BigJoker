@@ -1,8 +1,9 @@
-package com.android.games.bigjoker.ui.main.WebView
+package com.im30.ROE.g.ui.main.WebView
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.android.games.bigjoker.databinding.ActivityWebViewBinding
+import com.im30.ROE.g.databinding.ActivityWebViewBinding
+
 
 class WebViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWebViewBinding

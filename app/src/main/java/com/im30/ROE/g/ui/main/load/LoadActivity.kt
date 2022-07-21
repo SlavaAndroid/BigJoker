@@ -1,18 +1,18 @@
-package com.android.games.bigjoker.ui.main.load
+package com.im30.ROE.g.ui.main.load
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.android.games.bigjoker.data.repository.DataRepository
-import com.android.games.bigjoker.data.repository.DataRepositoryImpl
-import com.android.games.bigjoker.databinding.ActivityLoadBinding
-import com.android.games.bigjoker.ui.game.JokerGameActivity
-import com.android.games.bigjoker.ui.main.WebView.WebViewActivity
-import com.android.games.bigjoker.utils.CheckBlock
+import com.im30.ROE.g.data.repository.DataRepository
+import com.im30.ROE.g.data.repository.DataRepositoryImpl
+import com.im30.ROE.g.databinding.ActivityLoadingBinding
+import com.im30.ROE.g.ui.game.JokerActivity
+import com.im30.ROE.g.ui.main.WebView.WebViewActivity
+import com.im30.ROE.g.utils.CheckBlock
 
 class LoadActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoadBinding
+    private lateinit var binding: ActivityLoadingBinding
     private lateinit var viewModel: LoadViewModel
     private lateinit var repository: DataRepository
 
@@ -21,7 +21,7 @@ class LoadActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoadBinding.inflate(layoutInflater)
+        binding = ActivityLoadingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         if (!check.isBlock()) {
@@ -53,7 +53,7 @@ class LoadActivity : AppCompatActivity() {
     }
 
     private fun startJokerGame() {
-        val i = Intent(this, JokerGameActivity::class.java)
+        val i = Intent(this, JokerActivity::class.java)
         startActivity(i)
         finish()
     }

@@ -1,4 +1,4 @@
-package com.android.games.bigjoker.data.repository
+package com.im30.ROE.g.data.repository
 
 interface DataRepository {
     fun getFullLink(): String?

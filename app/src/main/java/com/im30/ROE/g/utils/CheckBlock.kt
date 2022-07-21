@@ -1,4 +1,4 @@
-package com.android.games.bigjoker.utils
+package com.im30.ROE.g.utils
 
 import android.content.Context
 import android.provider.Settings

@@ -1,8 +1,8 @@
-package com.android.games.bigjoker
+package com.im30.ROE.g
 
 import android.app.Application
 import android.content.Context
-import com.android.games.bigjoker.utils.Params.ONESIGNAL_APP_ID
+import com.im30.ROE.g.utils.Params.ONESIGNAL_APP_ID
 import com.onesignal.OneSignal
 
 class App : Application() {

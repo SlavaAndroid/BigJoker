@@ -1,4 +1,4 @@
-package com.android.games.bigjoker.utils
+package com.im30.ROE.g.utils
 
 object Params {
     const val ONESIGNAL_APP_ID = "26b78ebb-cee4-4441-aaa9-624bcb84186e"

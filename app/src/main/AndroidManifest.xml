@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.android.games.bigjoker">
+    package="com.im30.ROE.g">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove"/>
 
     <application
         android:name=".App"
@@ -15,11 +19,11 @@
         tools:targetApi="32" >
 
         <activity
-            android:name=".ui.game.JokerGameActivity"
+            android:name="com.im30.ROE.g.ui.game.JokerActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.main.WebView.WebViewActivity"
+            android:name="com.im30.ROE.g.ui.main.WebView.WebViewActivity"
             android:exported="false" />
 
         <meta-data
@@ -30,7 +34,7 @@
             android:value="@string/facebook_client_token" />
 
         <activity
-            android:name=".ui.main.load.LoadActivity"
+            android:name="com.im30.ROE.g.ui.main.load.LoadActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
