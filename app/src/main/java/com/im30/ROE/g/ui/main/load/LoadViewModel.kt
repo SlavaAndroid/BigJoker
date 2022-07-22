@@ -11,7 +11,10 @@ import com.facebook.applinks.AppLinkData
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.im30.ROE.g.utils.Params
 import com.onesignal.OneSignal
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.util.*
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
@@ -22,7 +25,7 @@ class LoadViewModel(private val app: Application) : AndroidViewModel(app) {
 
     init {
         viewModelScope.launch {
-            val defAF = async(start = CoroutineStart.LAZY) { getDataAppsFlyer(Params.APPS_DEV_KEY) }
+            val defAF = async { getDataAppsFlyer(Params.APPS_DEV_KEY) }.await()
             val defFB = async { getFbLink() }.await()
             val defGadid = async { getGadId() }.await()
 
@@ -32,9 +35,8 @@ class LoadViewModel(private val app: Application) : AndroidViewModel(app) {
                     resultLink.postValue(createResultLink(defFB, defGadid))
                     sendOneSignal(defFB)
                 } else {
-                    val def = defAF.await()
-                    resultLink.postValue(createResultLink(def, defGadid))
-                    sendOneSignal(def)
+                    resultLink.postValue(createResultLink(defAF, defGadid))
+                    sendOneSignal(defAF)
                 }
             }
         }

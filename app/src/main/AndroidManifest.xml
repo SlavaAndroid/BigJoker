@@ -24,6 +24,8 @@
 
         <activity
             android:name="com.im30.ROE.g.ui.main.WebView.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
 
         <meta-data
@@ -35,7 +37,8 @@
 
         <activity
             android:name="com.im30.ROE.g.ui.main.load.LoadActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.BigJoker.Launcher" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

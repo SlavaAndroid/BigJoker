@@ -8,8 +8,6 @@ object Params {
     const val SECURE_GET_PARAMETR = "qV6Wb1okG5"
     const val SECURE_KEY = "oJE2fP9Ijh"
     const val DEV_TMZ_KEY = "sN7Z0kdUV4"
-    const val ADB_KEY = "uPLQn7anjL"
-    const val REFERRER_KEY = "8Tgfh1fejy"
     const val GADID_KEY = "6ac9JCpgki"
     const val DEEPLINK_KEY = "X9jvK8yyEf"
     const val SOURCE_KEY = "qy6vr7O7PO"
