@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.im30.ROE.g.R
 import com.im30.ROE.g.data.repository.DataRepository
 import com.im30.ROE.g.data.repository.DataRepositoryImpl
 import com.im30.ROE.g.databinding.ActivityLoadingBinding
@@ -17,9 +18,9 @@ class LoadActivity : AppCompatActivity() {
     private lateinit var repository: DataRepository
 
     private val check = CheckBlock(this)
-    private var firstLink: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_BigJoker)
         super.onCreate(savedInstanceState)
         binding = ActivityLoadingBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -30,17 +31,16 @@ class LoadActivity : AppCompatActivity() {
             viewModel = ViewModelProvider(this)[LoadViewModel::class.java]
             repository = DataRepositoryImpl()
 
-            when (firstLink) {
+            when (repository.getCurrentOpenNumber()) {
                 1 -> viewModel.resultLink.observe(this) { link ->
-                    firstLink = 2
+                    repository.setCurrentOpenNumber(2)
                     startWebView(link)
                 }
                 2 -> viewModel.resultLink.observe(this) { link ->
-                    firstLink = 3
                     saveLink(link)
                     startWebView(link)
                 }
-                3 -> getLink()?.let { startWebView(it) }
+                else -> getLink()?.let { startWebView(it) }
             }
         }
     }

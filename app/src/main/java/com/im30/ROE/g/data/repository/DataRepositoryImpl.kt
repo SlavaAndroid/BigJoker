@@ -13,4 +13,12 @@ class DataRepositoryImpl : DataRepository {
     override fun saveFullLink(link: String) {
         prefs.saveLink(link)
     }
+
+    override fun getCurrentOpenNumber(): Int? {
+        return prefs.getOpenNumber()
+    }
+
+    override fun setCurrentOpenNumber(number: Int) {
+        prefs.saveOpenNumber(number)
+    }
 }
