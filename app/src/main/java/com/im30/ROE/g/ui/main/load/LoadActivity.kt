@@ -25,7 +25,7 @@ class LoadActivity : AppCompatActivity() {
         binding = ActivityLoadingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (!check.isBlock()) {
+        if (check.isBlock()) {
             startJokerGame()
         } else {
             viewModel = ViewModelProvider(this)[LoadViewModel::class.java]
