@@ -40,6 +40,8 @@ class WebViewActivity : AppCompatActivity() {
 
         webView.settings.domStorageEnabled = true
         webView.settings.loadWithOverviewMode = false
+        webView.settings.userAgentString =
+            "Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Mobile Safari/537.36"
 
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {

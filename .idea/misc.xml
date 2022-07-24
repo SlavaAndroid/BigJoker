@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/drawable-xxhdpi/splash_background.xml" value="0.206" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/drawable/loading_bar.xml" value="0.1" />
@@ -11,6 +12,7 @@
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/layout/activity_load.xml" value="0.228125" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/layout/activity_loading.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/layout/activity_web_view.xml" value="0.264" />
+        <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/layout/fragment_start_joker.xml" value="0.1" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/xml/loading_bar.xml" value="0.2421875" />
         <entry key="..\:/Users/S.K/AndroidStudioProjects/Trident/BigJoker/app/src/main/res/xml/splash_background.xml" value="0.2421875" />
       </map>
