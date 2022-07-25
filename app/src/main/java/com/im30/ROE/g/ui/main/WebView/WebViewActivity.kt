@@ -31,7 +31,7 @@ class WebViewActivity : AppCompatActivity() {
         webView = binding.webView
         repository = DataRepositoryImpl()
 
-        intent.getStringExtra("link")?.let { webView.loadUrl(it) }
+        intent.getStringExtra("link")!!.let { webView.loadUrl(it) }
         webView.webViewClient = Client()
         webView.settings.javaScriptEnabled = true
 
@@ -55,7 +55,7 @@ class WebViewActivity : AppCompatActivity() {
             ): Boolean {
                 messageAb = filePathCallback
                 selectImageIfNeed()
-                return true
+                return super.onShowFileChooser(webView, filePathCallback, fileChooserParams)
             }
 
             override fun onCreateWindow(
