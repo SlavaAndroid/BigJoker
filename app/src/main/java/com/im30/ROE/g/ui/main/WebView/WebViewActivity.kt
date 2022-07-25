@@ -31,7 +31,7 @@ class WebViewActivity : AppCompatActivity() {
         webView = binding.webView
         repository = DataRepositoryImpl()
 
-        intent.getStringExtra("link")!!.let { webView.loadUrl(it) }
+        webView.loadUrl(requireNotNull(intent.getStringExtra("link")))
         webView.webViewClient = Client()
         webView.settings.javaScriptEnabled = true
 
